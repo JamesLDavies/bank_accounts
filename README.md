@@ -1,2 +1,2 @@
 # bank_accounts
- C++ program using object orientated program to create a bank account system
+ C++ program using object orientated programming to create a bank account system
