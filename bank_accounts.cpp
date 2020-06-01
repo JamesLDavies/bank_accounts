@@ -3,6 +3,9 @@
 #include <iostream>
 using namespace std;
 
+#define TRUE 1
+#define FALSE 0
+
 class BankAccount{
 
 private:
@@ -39,11 +42,8 @@ public:
 
 int main()
 {
-	//Test
-	cout << "Hello World" << endl;
 
-
-	BankAccount bank_account; //change bank_account to customer number or account name??
+	BankAccount bank_account;
 
 	//Ask and print customer's name
 	cout << "Please enter your name" << endl;
@@ -53,8 +53,8 @@ int main()
 
 	bank_account.deposit(100); //test
 
-	int loop = 0;
-	while(loop == 0)
+	int use_atm = TRUE;
+	while(use_atm == TRUE)
 	{
 		cout << "\nWelcome to the Bank of James ATM" << endl;
 		cout << "1. View Balance" << endl;
@@ -85,16 +85,10 @@ int main()
 			break;
 
 			case 4: //Quit
-			exit(EXIT_SUCCESS);
+			use_atm = FALSE;
 		}
 
 	}
-
-
-	
-	
-
-
 
 	return 0;
 }
